@@ -1,0 +1,19 @@
+angular.module("myApp").controller("updateCtrl",function($scope,book,$routeParams,$location){
+ $scope.id=$routeParams.id;
+ $scope.book={};
+ $scope.success=false;
+ $scope.showDetails=function(){
+        book.showBook($scope.id).then(function(response)
+        {
+            $scope.book=response;
+        }); 
+    };
+    $scope.showDetails();
+    $scope.updateBook=function(){
+        book.updatebook($scope.book).then(function(response){
+         if(response.status===200){
+            $location.path("/Display");
+            }
+        });
+    };
+});

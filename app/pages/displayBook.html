@@ -1,0 +1,32 @@
+
+<div class="page-header">
+  <h1>List of Books</h1>
+</div>
+<div class="row">
+  <table class="table table-striped">
+    <tr>
+        <div class="col-md-3 col-md-offset-3">     
+            <th ><p style="margin-left: 200px">Title</p></th>
+        </div>
+        <div class="col-md-3">
+            <th><center>Year</center></th>
+            <th><center>Favourite</center></th>
+        </div>
+        <div class="col-md-3">
+            <th>Delete</th>
+        </div>
+    </tr>
+    <tr ng-repeat="t in show"> 
+        <div class="col-md-3" >    
+            <td ><a style="margin-left: 200px" href="#update/{{t.id}}">{{t.title}}</a></td> 
+        </div>
+        <div class="col-md-3">
+            <td><center>{{t.year}}</center></td>
+            <td><center>{{t.favorite}}</center></td>
+        </div>
+        <div class="col-md-3">
+            <td><button class="btn btn-danger" aria-label="Left Align" type="button" ng-click="delete(t.id)"><span class="glyphicon glyphicon-remove " aria-hidden="true">    </span><b>  Delete</b></button></td>
+        </div>
+    </tr>
+  </table>
+</div>

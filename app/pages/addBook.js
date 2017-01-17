@@ -1,0 +1,11 @@
+angular.module("myApp").controller("addCtrl",function($scope,book,$location){
+             $scope.book={};
+             $scope.book.favorite=false;
+             $scope.addBook=function(){
+                    book.addbook($scope.book).then(function(response){
+                            if(response===200){
+                                $location.path("/Display");
+                            }
+                    });
+            };
+        });

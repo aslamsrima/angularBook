@@ -1,0 +1,55 @@
+<div class="page-header">
+  <h1>Add Book Details</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-4"></div>
+        <div class="col-md-4 ">     
+            <form name="Details" >
+              <div class="form-group">
+                <label for="exampleInputTitle">Title</label>
+                <input name="title" style="width:100%" type="text" class="form-control" id="title" ng-model=book.title placeholder="Title" min=1950 max=2017 required>
+                <span style="color:red" ng-show="Details.title.$touched && Details.title.$invalid">Please enter the title.</span>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputYear">Year</label>
+                <input name="year" style="width:100%" type="number" class="form-control" id="year" ng-model=book.year placeholder="Year" min=1950 max=2017 required>
+                <span style="color:red" ng-show="Details.year.$touched && Details.year.$invalid">Please enter the valid year.</span>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" ng-model=book.favorite> Favourite
+                </label>
+              </div>
+              <button type="button" ng-disabled="Details.$invalid" ng-click="addBook()" class="btn btn-success" style="margin-left: 335px;width:100px ">Add</button>
+            </form>
+           </div>
+      </div>
+    <div class="col-md-4"></div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
